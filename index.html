@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="icon" id="favicon" type="image/x-icon" href="./assets/logo1.png">
+    <link rel="stylesheet" href="./style.css">
+
+    <!-- below am adding "defer" for js file, To act all the code was inside of script tag -->
+    <script src="./script.js" defer></script>
+</head>
+
+<body>
+    <h1><span>E</span><span>x</span>pense <span>T</span><span>r</span>acker</h1>
+
+    <button id="createExpenseBtn" class="my-button">+ New Expense</button>
+
+
+    <div class="overlay" id="overlay">
+
+        <div id="create_expense_div" style="display: none;">
+            <img src="./assets/close_icon.png" alt="close_icon" class="close_icon" id="close_icon">
+            <h2>Create New Expense</h2>
+            <form id="expenseForm">
+                <label for="ExpenseName" class="Name-class">Name:</label>
+                <input type="text" id="ExpenseName" placeholder="Ex: Shaik" required><br>
+
+                <label for="category_select">Category:</label>
+                <select id="category_select" required>
+                    <option value="none" selected disabled>--select--</option>
+                    <option value="Food">Food</option>
+                    <option value="Travel">Travel</option>
+                    <option value="Utilities">Utilities</option>
+                    <option value="Entertainment">Entertainment</option>
+                    <option value="Transportation">Transportation</option>
+                    <option value="Shopping">Shopping</option>
+                </select><br>
+
+                <label for="local_time">Date:</label>
+                <input type="datetime-local" id="local_time" required><br>
+
+                <label for="ExpenseAmount">Amount:</label>
+                <input type="text" id="ExpenseAmount" placeholder="Ex: 3500" required><br>
+
+                <label for="createdBy">Created By:</label>
+                <input type="text" id="createdBy" placeholder="Ex: Shaik" required><br>
+
+                <!-- Adding an "NewExpense" button -->
+                <input type="button" value="Add Expense" id="createExpensePop">
+
+                <!-- Adding an "Update" button -->
+                <input type="button" value="Update Expense" id="updateExpensePop">
+            </form>
+        </div>
+
+    </div>
+
+    <div class="overlayDeleteHolder" id="overlayDeleteHolder">
+        <div class="deleteBox">
+            <h1>Are you sure you want to delete this Expense</h1>
+            <button id="noBtn">No</button>
+            <button id="yesBtn">Yes,Delete!</button>
+        </div>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Category</th>
+                <th>Date</th>
+                <th>Amount</th>
+                <th>Created By</th>
+                <th>Modified Date</th>
+                <th>Edit/Delete</th>
+            </tr>
+        </thead>
+        <tbody id="tableBody">
+            <!-- Expense data will be displayed here -->
+        </tbody>
+    </table>
+
+    <ul id="pagination">
+        <!-- Pagination buttons will be added here -->
+    </ul>
+
+
+    <p class="made_with">
+        &copy; 2023 | Handcrafted with <span class="creator">❤</span> by <span class="creator">Fizal Shaik</span>
+        <!-- hearts ❤❤️ -->
+    </p>
+</body>
+
+</html>
