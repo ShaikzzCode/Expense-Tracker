@@ -6,6 +6,10 @@ An Expense Tracking website created using HTML, CSS, and JavaScript.
 
 The Expense Tracker is a web application designed to help users manage their personal finances by tracking their expenses. Users can add, edit, and delete expenses, and the app will provide a summary of total expenses over time. The project was developed by Fizal Ali Shaik in November 2023.
 
+## Website Preview
+https://expensetrackerbyshaik.000webhostapp.com/
+
+
 ## Features
 
 - **Add Expenses**: Users can add details of their expenses including description, amount, and date.
